@@ -54,7 +54,7 @@ Ceph's included balancer optimizes by PG count on devices.
 It does so by analyzing each pool independently, and then tries to move each pool's PGs so that each participating device has equal normalized PG counts.
 Normalized means placing double the PGs on a double-sized OSD.
 
-Example: Placing 600 PGs on a 2T and 4T OSD means each 1T gets `600PGs/(4T+2T) = 100PGs/T`, thus the 2T OSD gets 200PGs, the 4T OSD 600.
+Example: Placing 600 PGs on a 2T and 4T OSD means each 1T gets `600PGs/(4T+2T) = 100PGs/T`, thus the 2T OSD gets 200PGs, the 4T OSD 400.
 
 PG counts are powers of two, so distributing them really equally will almost never work.
 
